@@ -1,0 +1,134 @@
+/* Container for the entire page */
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+/* Title styling */
+.homepage-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form and buttons container */
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Input styling */
+.search-input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling */
+.search-btn,
+.add-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.search-btn:hover,
+.add-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Card layout for investment data */
+.investment-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+}
+
+.investment-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.investment-card h3 {
+  color: #007bff;
+}
+
+.investment-card p {
+  font-size: 1rem;
+  color: #333;
+  margin: 8px 0;
+}
+
+.edit-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.edit-btn:hover {
+  background-color: #218838;
+}
+
+/* No results found message */
+.no-results {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .investment-card {
+    padding: 15px;
+  }
+
+  .search-form {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage-title {
+    font-size: 2rem;
+  }
+
+  .search-input,
+  .search-btn,
+  .add-btn {
+    font-size: 0.9rem;
+  }
+}
